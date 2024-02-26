@@ -1,0 +1,152 @@
+
+/* Global Styles */
+.neon-button {
+    background: var(--neon-pink); /* This sets the button color */
+    color: var(--star-white); /* This sets the text color */
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .neon-pink {
+    background: var(--neon-pink);
+    box-shadow: 
+      0 0 5px var(--neon-pink),
+      0 0 10px var(--neon-pink),
+      0 0 15px var(--neon-pink),
+      0 0 20px var(--neon-pink),
+      0 0 25px var(--neon-pink),
+      0 0 30px var(--neon-pink),
+      0 0 35px var(--neon-pink);
+   
+    color: var(--star-white);
+  }
+  
+  .neon-pink:hover {
+    box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink);
+  }
+  
+  .neon-blue {
+    background: var(--neon-blue);
+    box-shadow: 0 0 5px var(--neon-blue), 
+      0 0 10px var(--neon-blue), 
+      0 0 15px var(--neon-blue),
+      0 0 20px var(--neon-blue),
+      0 0 25px var(--neon-blue),
+      0 0 30px var(--neon-blue),
+      0 0 35px var(--neon-blue);
+    color: var(--star-white);
+  }
+  
+  .neon-blue:hover {
+    box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+  }
+  
+ 
+  
+  
+  :root {
+    --neon-pink: #FF6AD5;
+    --neon-blue: #4DEEEA;
+    --neon-green: #7FFF00;
+    --space-purple: #7E57C2;
+    --moon-pink: #FFC0CB;
+    --star-white: #FFFFFF;
+  }
+  
+  body {
+    /* Gradient background for galactic scene */
+    background: linear-gradient(to right, var(--moon-pink), var(--neon-pink), var(--space-purple), var(--neon-blue));
+  }
+  
+  body {
+    background: linear-gradient(to right, var(--moon-pink), var(--neon-pink), var(--space-purple), var(--neon-blue));
+    background-image: url('../media/img/background.png');
+    background-color: #000; /* Fallback color */;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* If you want to inherit the gradient and image */
+    opacity: 0.6;
+    z-index: -1;
+}
+
+  
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #57d3f8;
+}
+
+ Introduction Section 
+#introduction {
+   
+    color: #fff;
+    padding: 50px 0;
+}
+
+* Navigation Section */
+nav {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav h1 {
+    float: left;
+    margin: 0;
+    font-size: 16px;
+}
+
+nav ul {
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+}
+
+/* Music Section */
+#music {
+    background-color: #2e2e2e;
+    color: #fff;
+    padding: 50px 0;
+}
+
+
+/* Add more styling as needed */

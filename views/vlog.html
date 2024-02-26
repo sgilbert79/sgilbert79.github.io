@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>purrspectivity.com</title>
+    <link rel="stylesheet" href="../public/css/vlog_styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <h1></h1>
+            <ul>
+                <li><a class="neon-button neon-pink" href="index.html">Services</a></li>
+                <li><a class="neon-button neon-blue" href="shop.html">Merch</a></li>
+                <li><a class="neon-button neon-pink" href="donation.html">Donate</a></li>
+                <li><a class="neon-button neon-blue" href="contact.html">Contact</a></li>
+                <li><a class="neon-button neon-pink" href="vlog.html">Vlog</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <div style="display: flex; justify-content: center; align-items: center; height: 50vh; min-height: 500px; margin-top: 50vh;">
+     
+        <video id="videoPlayer" width="320" height="240" controls>
+          Your browser does not support the video tag.
+        </video>
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', X-Content-Type-Options.JSON.nosniff, function() {
+            fetch('/api/videos/random')
+                .then(response => response.text())  // First get the text
+                .then(text => {
+                    console.log(text);  // Log the text to see what you're getting
+                    return JSON.parse(text);  // Then parse it as JSON
+                    })  
+                .then(data => {
+                    // Use data to populate your HTML with video content
+                    console.log(data);
+                    const videoPlayer = document.getElementById('videoPlayer');
+                    if (data.data.length > 0) {
+                        videoPlayer.src = data.data[0].FilePath;
+                        videoPlayer.load();
+                    }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+            });
+
+        </script>
+</body>
+
+</html>
